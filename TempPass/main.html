@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+
+</head>
+<body>
+    <div class="popup-container">
+        <h1>Temporary Password</h1>
+
+        <div class="btn-container">
+            <input id="passwordInput" class="pass-container" type="text" value="" readonly>
+            <button id="generatePasswordButton" class="btn-fun">Generate Password</button>
+            <button id="settingsButton" class="btn-fun">Settings</button>
+            <div id="settings-container" class="hidden">
+                <label for="count">How Many Words?</label>
+                <input id="count" class="input-fun" type="number" value="4">
+                <label for="length">How many letters per word?</label>
+                <input id="length" class="input-fun" type="number" value="4">
+                <button id="save-btn" class="btn-fun2">Save</button>
+            </div>
+            <button id="historyButton" class="btn-fun">History</button>
+            <div id="historyContainer" class="hidden">
+                <h3>Previous Passwords</h3>
+                <button id="clearHistory" class="btn-fun2">Clear History</button>
+                <div id="passwordList" class="prettylist">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/scripts/main.js"></script>
+</body>
+</html>
