@@ -6,6 +6,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+chrome.runtime.onInstalled.addListener(function() {
+    chrome.storage.local.set({passwordHistory: []}, function() {
+        console.log('History cleared');
+    }
+    );
+    chrome.storage.local.set({settings: {length: 4, count: 3}}, function() {
+        console.log('Settings saved');
+    }
+    );
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('passwordInput').addEventListener('click', function() {
         console.log('Copy button clicked');
